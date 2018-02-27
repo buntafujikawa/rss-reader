@@ -12,19 +12,21 @@ import android.content.res.Configuration
 import android.net.Uri
 import android.os.Build.VERSION.SDK_INT
 import android.os.Build.VERSION_CODES.LOLLIPOP
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.SystemClock
+import android.support.design.widget.TabLayout
 import android.support.v4.content.ContextCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBar
 import android.support.v7.app.ActionBarDrawerToggle
-import android.view.MenuItem
+import android.support.v7.app.AppCompatActivity
 import android.support.customtabs.CustomTabsIntent
+import android.view.MenuItem
 
 import com.example.android.sample.myrssreader.WebPageFragment
 import com.example.buntafujikawa.rssreader.data.Link
 import com.example.buntafujikawa.rssreader.service.PollingService
+import com.example.buntafujikawa.rssreader.adapter.LinkListPagerAdapter
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -44,6 +46,17 @@ class MainActivity : AppCompatActivity(), SiteListFragment.SiteListFragmentListe
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        setSupportActionBar(main_toolbar)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        val viewPager = main_viewpager
+        val adapter = LinkListPagerAdapter(supportFragmentManager)
+        viewPager.adapter = adapter
+//        setDrawer()
+
+        val tabLayout = main_tab as TabLayout
+        tabLayout.setupWithViewPager(viewPager)
 
         mIsDualPane = DualPaneContainer != null
 

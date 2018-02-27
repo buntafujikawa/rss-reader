@@ -1,10 +1,10 @@
 package com.example.buntafujikawa.rssreader
 
-import android.app.Fragment
-import android.app.LoaderManager
 import android.content.Context
-import android.content.Loader
 import android.os.Bundle
+import android.support.v4.app.Fragment
+import android.support.v4.app.LoaderManager
+import android.support.v4.content.Loader
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.buntafujikawa.rssreader.adapter.LinkAdapter
+import com.example.buntafujikawa.rssreader.common.LinkListType
 import com.example.buntafujikawa.rssreader.data.Link
 import com.example.buntafujikawa.rssreader.loader.LinkListLoader
 
@@ -24,6 +25,16 @@ class LinkListFragment : Fragment(), LoaderManager.LoaderCallbacks<List<Link>>, 
 
     companion object {
         private const val LOADER_LINKS: Int = 1
+
+        private const val LINK_LIST_TYPE_PARAM = "link_list_type_param"
+
+        fun newInstance(linkListType: LinkListType): LinkListFragment {
+            val fragment = LinkListFragment()
+            val args = Bundle()
+            args.putInt(LINK_LIST_TYPE_PARAM, linkListType.rawValue)
+            fragment.arguments = args
+            return fragment
+        }
     }
 
     // リストがタップされた時のリスナー
@@ -81,7 +92,8 @@ class LinkListFragment : Fragment(), LoaderManager.LoaderCallbacks<List<Link>>, 
 
     override fun onCreateLoader(id: Int, args: Bundle?): Loader<List<Link>>? {
         if (id == LOADER_LINKS) {
-            val loader: LinkListLoader = LinkListLoader(activity)
+            // TODO 無理やり動くようにしたので確認
+            val loader: LinkListLoader = LinkListLoader(activity as Context)
             loader.forceLoad()
             return loader
         }
@@ -97,7 +109,7 @@ class LinkListFragment : Fragment(), LoaderManager.LoaderCallbacks<List<Link>>, 
         }
     }
 
-    override fun onLoaderReset(loader: Loader<List<Link>>?) {
+    override fun onLoaderReset(loader: android.support.v4.content.Loader<List<Link>>?) {
 
     }
 

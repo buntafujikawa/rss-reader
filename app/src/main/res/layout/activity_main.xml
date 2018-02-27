@@ -1,27 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/DrawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
     tools:context="com.example.buntafujikawa.rssreader.MainActivity">
 
-    <!-- main content -->
-    <FrameLayout
-        android:id="@+id/MasterContainer"
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/overview_coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <fragment
-            android:id="@+id/LinkList"
-            android:name="com.example.buntafujikawa.rssreader.LinkListFragment"
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:layout_scrollFlags="enterAlways|scroll" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/main_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@android:color/white"
+                app:tabIndicatorColor="@color/colorPrimary"></android.support.design.widget.TabLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/main_viewpager"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:layout="@layout/fragment_links" />
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
-    </FrameLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!--<android.support.design.widget.NavigationView-->
+        <!--android:id="@+id/main_drawer_navigation"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="start"-->
+        <!--android:background="@android:color/white"/>-->
+        <!--&lt;!&ndash;app:headerLayout="@layout/layout_drawer_header"&ndash;&gt;-->
+        <!--app:menu="@menu/menu_drawer" />-->
+
+    <!-- main content -->
+    <!--<FrameLayout-->
+        <!--android:id="@+id/MasterContainer"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<fragment-->
+            <!--android:id="@+id/LinkList"-->
+            <!--android:name="com.example.buntafujikawa.rssreader.LinkListFragment"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--tools:layout="@layout/fragment_links" />-->
+
+    <!--</FrameLayout>-->
 
     <!-- drawer menu -->
+    <!--todo navigation viewの方が良さそう-->
     <FrameLayout
         android:id="@+id/DrawerMenu"
         android:layout_width="240dp"
