@@ -92,8 +92,7 @@ class LinkListFragment : Fragment(), LoaderManager.LoaderCallbacks<List<Link>>, 
 
     override fun onCreateLoader(id: Int, args: Bundle?): Loader<List<Link>>? {
         if (id == LOADER_LINKS) {
-            // TODO 無理やり動くようにしたので確認
-            val loader: LinkListLoader = LinkListLoader(activity as Context)
+            val loader: LinkListLoader = LinkListLoader(this.context!!)
             loader.forceLoad()
             return loader
         }
@@ -109,7 +108,7 @@ class LinkListFragment : Fragment(), LoaderManager.LoaderCallbacks<List<Link>>, 
         }
     }
 
-    override fun onLoaderReset(loader: android.support.v4.content.Loader<List<Link>>?) {
+    override fun onLoaderReset(loader: Loader<List<Link>>?) {
 
     }
 
