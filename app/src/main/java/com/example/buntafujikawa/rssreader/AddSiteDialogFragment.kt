@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.dialog_input_url.view.*
 
 /**
  * URL入力用のFragment
+ * TODO android.app.Fragmentを使用することになるので変更したい
  */
 class AddSiteDialogFragment : DialogFragment() {
 

@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity(), SiteListFragment.SiteListFragmentListe
         val viewPager = main_viewpager
         val adapter = LinkListPagerAdapter(supportFragmentManager)
         viewPager.adapter = adapter
-//        setDrawer()
 
         val tabLayout = main_tab as TabLayout
         tabLayout.setupWithViewPager(viewPager)

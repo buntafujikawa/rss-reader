@@ -33,4 +33,8 @@ class LinkListPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
     override fun getCount(): Int {
         return TabMenu.values().size
     }
+
+    override fun getPageTitle(position: Int): CharSequence? {
+        return TabMenu.values()[position].title
+    }
 }
