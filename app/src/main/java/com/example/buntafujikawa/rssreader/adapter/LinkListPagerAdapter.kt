@@ -4,22 +4,23 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 
+import com.example.buntafujikawa.rssreader.AwsNewestInformationFragment
 import com.example.buntafujikawa.rssreader.LinkListFragment
 import com.example.buntafujikawa.rssreader.common.LinkListType
 
 class LinkListPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
     enum class TabMenu(val title: String) {
-        // TODO タブごとにフラグメントを変更する
         Newest("最新情報") {
-            override fun createFragment(): Fragment = LinkListFragment.newInstance(LinkListType.Newest)
+            override fun createFragment(): Fragment = AwsNewestInformationFragment.newInstance(LinkListType.Newest)
         },
-        TROUBLE("障害情報") {
-            override fun createFragment() = LinkListFragment.newInstance(LinkListType.TROUBLE)
-        },
-        TWITCH("Twitch") {
-            override fun createFragment() = LinkListFragment.newInstance(LinkListType.TWITCH)
-        },
+        // TODO 対応完了したらタブを追加する
+//        TROUBLE("障害情報") {
+//            override fun createFragment() = LinkListFragment.newInstance(LinkListType.TROUBLE)
+//        },
+//        TWITCH("Twitch") {
+//            override fun createFragment() = LinkListFragment.newInstance(LinkListType.TWITCH)
+//        },
         OPTIONAL("OPTIONAL") {
             override fun createFragment() = LinkListFragment.newInstance(LinkListType.OPTIONAL)
         };

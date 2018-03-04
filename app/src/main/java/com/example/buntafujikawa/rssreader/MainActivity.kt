@@ -30,7 +30,8 @@ import com.example.buntafujikawa.rssreader.adapter.LinkListPagerAdapter
 
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(), SiteListFragment.SiteListFragmentListener, LinkListFragment.LinkListFragmentListener {
+// TODO interfaceが増えてきたので、構成を変更したほうが良さそう
+class MainActivity : AppCompatActivity(), SiteListFragment.SiteListFragmentListener, LinkListFragment.LinkListFragmentListener, AwsNewestInformationFragment.AwsNewestInformationFragmentListener {
 
     companion object {
         // 定期フェッチのジョブID
@@ -80,6 +81,7 @@ class MainActivity : AppCompatActivity(), SiteListFragment.SiteListFragmentListe
     @SuppressLint("NewApi")
     private fun setRepeatingTask() {
         // API Levelが21以上でないとJobSchedulerを使用できない
+        // TODO 削除して大丈夫なはず
         if (SDK_INT >= LOLLIPOP) {
             val jobService: ComponentName = ComponentName(this, PollingJob::class.java)
 
