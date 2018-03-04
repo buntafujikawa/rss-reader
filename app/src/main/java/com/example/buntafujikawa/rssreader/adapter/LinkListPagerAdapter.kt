@@ -10,6 +10,7 @@ import com.example.buntafujikawa.rssreader.common.LinkListType
 class LinkListPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 
     enum class TabMenu(val title: String) {
+        // TODO タブごとにフラグメントを変更する
         Newest("最新情報") {
             override fun createFragment(): Fragment = LinkListFragment.newInstance(LinkListType.Newest)
         },

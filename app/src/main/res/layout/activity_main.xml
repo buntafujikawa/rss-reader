@@ -44,30 +44,6 @@
 
     </android.support.design.widget.CoordinatorLayout>
 
-    <!--<android.support.design.widget.NavigationView-->
-        <!--android:id="@+id/main_drawer_navigation"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_gravity="start"-->
-        <!--android:background="@android:color/white"/>-->
-        <!--&lt;!&ndash;app:headerLayout="@layout/layout_drawer_header"&ndash;&gt;-->
-        <!--app:menu="@menu/menu_drawer" />-->
-
-    <!-- main content -->
-    <!--<FrameLayout-->
-        <!--android:id="@+id/MasterContainer"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent">-->
-
-        <!--<fragment-->
-            <!--android:id="@+id/LinkList"-->
-            <!--android:name="com.example.buntafujikawa.rssreader.LinkListFragment"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--tools:layout="@layout/fragment_links" />-->
-
-    <!--</FrameLayout>-->
-
     <!-- drawer menu -->
     <!--todo navigation viewの方が良さそう-->
     <FrameLayout
