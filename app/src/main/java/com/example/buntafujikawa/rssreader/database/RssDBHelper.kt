@@ -19,8 +19,6 @@ class RssDBHelper(context: Context) : SQLiteOpenHelper(context, DB_NAME, null, D
 
         val PROJECTION: Array<String> = arrayOf(ID, TITLE, DESCRIPTION, URL)
 
-        // TODO 初期のデータを取得しないようにする条件を追加
-
         const val CREATE_TABLE_SQL: String = ("CREATE TABLE " + TABLE_NAME + " ("
             + ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + TITLE + " TEXT NOT NULL, "

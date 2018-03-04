@@ -55,7 +55,6 @@ object RssRepository {
 
         val sites: ArrayList<Site> = ArrayList<Site>()
 
-        // TODO 初期のデータを取得しないようにする条件を追加
         val cursor = database.query(RssDBHelper.Site.TABLE_NAME,
             RssDBHelper.Site.PROJECTION, null, null, null, null, null, null)
 

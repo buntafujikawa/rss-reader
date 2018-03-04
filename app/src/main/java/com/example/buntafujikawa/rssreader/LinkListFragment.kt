@@ -20,11 +20,13 @@ import kotlinx.android.synthetic.main.fragment_links.view.*
 
 /**
  * 記事一覧を表示するFragment
+ * TODO 当初はフォードを登録するだけだったけど、色々と追加をしたので、命名を変更したほうが良さそう
  */
 class LinkListFragment : Fragment(), LoaderManager.LoaderCallbacks<List<Link>>, LinkAdapter.OnItemClickListener {
 
     companion object {
-        private const val LOADER_LINKS: Int = 1
+        // LinkListTypeに合わせている
+        private const val LOADER_LINKS: Int = 4
 
         private const val LINK_LIST_TYPE_PARAM = "link_list_type_param"
 
@@ -53,20 +55,6 @@ class LinkListFragment : Fragment(), LoaderManager.LoaderCallbacks<List<Link>>, 
         }
     }
 
-    // onCreateが完了した後に呼ばれる
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-
-        loaderManager.initLoader(LOADER_LINKS, null, this)
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-
-        // ビューが破棄されたらloaderも不要なため
-        loaderManager.destroyLoader(LOADER_LINKS)
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
 
         val v: View = inflater.inflate(R.layout.fragment_links, container, false)
@@ -81,6 +69,20 @@ class LinkListFragment : Fragment(), LoaderManager.LoaderCallbacks<List<Link>>, 
         recyclerView.adapter = mAdapter
 
         return v
+    }
+
+    // onCreateが完了した後に呼ばれる
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+
+        loaderManager.initLoader(LOADER_LINKS, null, this)
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+
+        // ビューが破棄されたらloaderも不要なため
+        loaderManager.destroyLoader(LOADER_LINKS)
     }
 
     // リストアイテムがタップされた時のイベント

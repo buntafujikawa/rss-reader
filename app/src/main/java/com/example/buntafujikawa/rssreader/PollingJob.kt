@@ -13,6 +13,7 @@ import com.example.buntafujikawa.rssreader.parser.RssParser
 
 /**
  * 定期的に起動される、フィードの記事をダウンロードするJob
+ * 動作確認をまだしていない
  */
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 class PollingJob : JobService() {
