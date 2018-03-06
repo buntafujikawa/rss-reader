@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.fragment_links.view.*
 
 /**
  * AWSの最新情報一覧を表示するFragment
+ * TODO そもそも同じだから共通化させた方が良いな
  */
 class AwsNewestInformationFragment : Fragment(), LoaderManager.LoaderCallbacks<List<Link>>, LinkAdapter.OnItemClickListener {
 

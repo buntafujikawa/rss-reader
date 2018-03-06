@@ -145,12 +145,14 @@ class MainActivity : AppCompatActivity(), SiteListFragment.SiteListFragmentListe
     }
 
     override fun onSiteDeleted(siteId: Long) {
-        val fragment: LinkListFragment = fragmentManager.findFragmentById(R.id.LinkList) as LinkListFragment
-        fragment.removeLinks(siteId)
+        // TODO ViewPagerにしたらこけるけど時間がかかりそうなので一時的にコメントアウトした
+        // https://github.com/buntafujikawa/rss-reader/commit/d144b38582797bac20640b27256953d85b54dbf8#diff-03fed2eb51192f2b91ea135dd4d65600
+//        val fragment: LinkListFragment = fragmentManager.findFragmentById(R.id.LinkList) as LinkListFragment
+//        fragment.removeLinks(siteId)
     }
 
     override fun onSiteAdded() {
-        val fragment: LinkListFragment = fragmentManager.findFragmentById(R.id.LinkList) as LinkListFragment
-        fragment.reload()
+//        val fragment: LinkListFragment = fragmentManager.findFragmentById(R.id.LinkList) as LinkListFragment
+//        fragment.reload()
     }
 }
