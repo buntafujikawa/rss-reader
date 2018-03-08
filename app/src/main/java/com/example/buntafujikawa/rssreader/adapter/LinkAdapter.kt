@@ -1,4 +1,4 @@
-package com.example.buntafujikawa.rssreader.adapter
+package com.sugosumadesu.buntafujikawa.rssreader.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 
-import com.example.buntafujikawa.rssreader.R
-import com.example.buntafujikawa.rssreader.data.Link
+import com.sugosumadesu.buntafujikawa.rssreader.R
+import com.sugosumadesu.buntafujikawa.rssreader.data.Link
 
 import kotlinx.android.synthetic.main.item_link.view.*
 

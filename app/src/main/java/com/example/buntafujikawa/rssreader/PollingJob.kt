@@ -1,4 +1,4 @@
-package com.example.buntafujikawa.rssreader
+package com.sugosumadesu.buntafujikawa.rssreader
 
 import android.annotation.TargetApi
 import android.app.job.JobParameters
@@ -6,10 +6,10 @@ import android.app.job.JobService
 import android.os.AsyncTask
 import android.os.Build
 
-import com.example.buntafujikawa.rssreader.data.Site
-import com.example.buntafujikawa.rssreader.database.RssRepository
-import com.example.buntafujikawa.rssreader.net.HttpGet
-import com.example.buntafujikawa.rssreader.parser.RssParser
+import com.sugosumadesu.buntafujikawa.rssreader.data.Site
+import com.sugosumadesu.buntafujikawa.rssreader.database.RssRepository
+import com.sugosumadesu.buntafujikawa.rssreader.net.HttpGet
+import com.sugosumadesu.buntafujikawa.rssreader.parser.RssParser
 
 /**
  * 定期的に起動される、フィードの記事をダウンロードするJob

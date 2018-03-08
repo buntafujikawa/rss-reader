@@ -1,4 +1,4 @@
-package com.example.buntafujikawa.rssreader
+package com.sugosumadesu.buntafujikawa.rssreader
 
 import android.app.Activity
 import android.app.Fragment
@@ -14,11 +14,11 @@ import android.widget.AdapterView
 import android.widget.ListView
 import android.widget.Toast
 
-import com.example.buntafujikawa.rssreader.data.Site
-import com.example.buntafujikawa.rssreader.adapter.SiteAdapter
-import com.example.buntafujikawa.rssreader.loader.AddSiteLoader
-import com.example.buntafujikawa.rssreader.loader.DeleteSiteLoader
-import com.example.buntafujikawa.rssreader.loader.SiteListLoader
+import com.sugosumadesu.buntafujikawa.rssreader.data.Site
+import com.sugosumadesu.buntafujikawa.rssreader.adapter.SiteAdapter
+import com.sugosumadesu.buntafujikawa.rssreader.loader.AddSiteLoader
+import com.sugosumadesu.buntafujikawa.rssreader.loader.DeleteSiteLoader
+import com.sugosumadesu.buntafujikawa.rssreader.loader.SiteListLoader
 
 /**
  * RSS配信サイトの一覧を表示するFragment

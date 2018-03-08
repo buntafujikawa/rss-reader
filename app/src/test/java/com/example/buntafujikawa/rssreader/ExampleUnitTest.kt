@@ -1,4 +1,4 @@
-package com.example.buntafujikawa.rssreader
+package com.sugosumadesu.buntafujikawa.rssreader
 
 import org.junit.Test
 

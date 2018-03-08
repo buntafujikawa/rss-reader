@@ -1,12 +1,12 @@
-package com.example.buntafujikawa.rssreader.database
+package com.sugosumadesu.buntafujikawa.rssreader.database
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.DatabaseUtils
 import android.database.sqlite.SQLiteDatabase
 
-import com.example.buntafujikawa.rssreader.data.Link
-import com.example.buntafujikawa.rssreader.data.Site
+import com.sugosumadesu.buntafujikawa.rssreader.data.Link
+import com.sugosumadesu.buntafujikawa.rssreader.data.Site
 
 import java.util.ArrayList
 

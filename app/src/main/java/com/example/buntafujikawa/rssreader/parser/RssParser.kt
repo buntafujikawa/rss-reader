@@ -1,7 +1,7 @@
-package com.example.buntafujikawa.rssreader.parser
+package com.sugosumadesu.buntafujikawa.rssreader.parser
 
-import com.example.buntafujikawa.rssreader.data.Link
-import com.example.buntafujikawa.rssreader.data.Site
+import com.sugosumadesu.buntafujikawa.rssreader.data.Link
+import com.sugosumadesu.buntafujikawa.rssreader.data.Site
 
 import org.w3c.dom.Document
 import org.w3c.dom.NodeList

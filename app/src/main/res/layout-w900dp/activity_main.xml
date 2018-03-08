@@ -4,7 +4,7 @@
     android:id="@+id/DrawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.buntafujikawa.rssreader.MainActivity">
+    tools:context="com.sugosumadesu.buntafujikawa.rssreader.MainActivity">
 
     <!-- main container -->
     <LinearLayout
@@ -22,7 +22,7 @@
             android:layout_height="match_parent">
 
             <fragment
-                android:name="com.example.buntafujikawa.rssreader.LinkListFragment"
+                android:name="com.sugosumadesu.buntafujikawa.rssreader.LinkListFragment"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 tools:layout="@layout/fragment_links" />
@@ -47,7 +47,7 @@
         android:background="?android:attr/colorBackground">
 
         <fragment
-            android:name="com.example.buntafujikawa.rssreader.SiteListFragment"
+            android:name="com.sugosumadesu.buntafujikawa.rssreader.SiteListFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_sites" />

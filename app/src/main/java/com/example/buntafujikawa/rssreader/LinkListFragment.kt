@@ -1,4 +1,4 @@
-package com.example.buntafujikawa.rssreader
+package com.sugosumadesu.buntafujikawa.rssreader
 
 import android.content.Context
 import android.os.Bundle
@@ -11,10 +11,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import com.example.buntafujikawa.rssreader.adapter.LinkAdapter
-import com.example.buntafujikawa.rssreader.common.LinkListType
-import com.example.buntafujikawa.rssreader.data.Link
-import com.example.buntafujikawa.rssreader.loader.LinkListLoader
+import com.sugosumadesu.buntafujikawa.rssreader.adapter.LinkAdapter
+import com.sugosumadesu.buntafujikawa.rssreader.common.LinkListType
+import com.sugosumadesu.buntafujikawa.rssreader.data.Link
+import com.sugosumadesu.buntafujikawa.rssreader.loader.LinkListLoader
 
 import kotlinx.android.synthetic.main.fragment_links.view.*
 

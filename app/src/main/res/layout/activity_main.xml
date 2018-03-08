@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:clickable="true"
     android:focusableInTouchMode="true"
-    tools:context="com.example.buntafujikawa.rssreader.MainActivity">
+    tools:context="com.sugosumadesu.buntafujikawa.rssreader.MainActivity">
 
     <android.support.design.widget.CoordinatorLayout
         android:id="@+id/overview_coordinator_layout"
@@ -55,7 +55,7 @@
 
         <fragment
             android:id="@+id/SiteList"
-            android:name="com.example.buntafujikawa.rssreader.SiteListFragment"
+            android:name="com.sugosumadesu.buntafujikawa.rssreader.SiteListFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_sites" />

@@ -1,12 +1,12 @@
-package com.example.buntafujikawa.rssreader.adapter
+package com.sugosumadesu.buntafujikawa.rssreader.adapter
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 
-import com.example.buntafujikawa.rssreader.AwsNewestInformationFragment
-import com.example.buntafujikawa.rssreader.LinkListFragment
-import com.example.buntafujikawa.rssreader.common.LinkListType
+import com.sugosumadesu.buntafujikawa.rssreader.AwsNewestInformationFragment
+import com.sugosumadesu.buntafujikawa.rssreader.LinkListFragment
+import com.sugosumadesu.buntafujikawa.rssreader.common.LinkListType
 
 class LinkListPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
 

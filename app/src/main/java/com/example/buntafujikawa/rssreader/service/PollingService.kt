@@ -1,14 +1,14 @@
-package com.example.buntafujikawa.rssreader.service
+package com.sugosumadesu.buntafujikawa.rssreader.service
 
 import android.annotation.SuppressLint
 import android.app.IntentService
 import android.content.Intent
 
-import com.example.buntafujikawa.rssreader.NotificationUtil
-import com.example.buntafujikawa.rssreader.data.Site
-import com.example.buntafujikawa.rssreader.database.RssRepository
-import com.example.buntafujikawa.rssreader.net.HttpGet
-import com.example.buntafujikawa.rssreader.parser.RssParser
+import com.sugosumadesu.buntafujikawa.rssreader.NotificationUtil
+import com.sugosumadesu.buntafujikawa.rssreader.data.Site
+import com.sugosumadesu.buntafujikawa.rssreader.database.RssRepository
+import com.sugosumadesu.buntafujikawa.rssreader.net.HttpGet
+import com.sugosumadesu.buntafujikawa.rssreader.parser.RssParser
 
 @SuppressLint("Registered")
 

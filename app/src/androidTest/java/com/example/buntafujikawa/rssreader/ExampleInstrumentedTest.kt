@@ -1,4 +1,4 @@
-package com.example.buntafujikawa.rssreader
+package com.sugosumadesu.buntafujikawa.rssreader
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.example.buntafujikawa.rssreader", appContext.packageName)
+        assertEquals("com.sugosumadesu.buntafujikawa.rssreader", appContext.packageName)
     }
 }

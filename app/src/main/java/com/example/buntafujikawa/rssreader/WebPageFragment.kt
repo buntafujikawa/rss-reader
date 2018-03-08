@@ -1,4 +1,4 @@
-package com.example.android.sample.myrssreader
+package com.sugosumadesu.android.sample.myrssreader
 
 import android.os.Bundle
 import android.view.LayoutInflater

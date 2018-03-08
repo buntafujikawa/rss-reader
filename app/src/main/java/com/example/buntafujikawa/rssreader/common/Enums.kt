@@ -1,4 +1,4 @@
-package com.example.buntafujikawa.rssreader.common
+package com.sugosumadesu.buntafujikawa.rssreader.common
 
 enum class LinkListType(val rawValue: Int) {
     Newest(1), TROUBLE(2), TWITCH(3), OPTIONAL(4);

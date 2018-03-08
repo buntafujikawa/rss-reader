@@ -1,4 +1,4 @@
-package com.example.buntafujikawa.rssreader
+package com.sugosumadesu.buntafujikawa.rssreader
 
 import android.annotation.SuppressLint
 import android.app.AlarmManager
@@ -23,10 +23,10 @@ import android.support.v7.app.AppCompatActivity
 import android.support.customtabs.CustomTabsIntent
 import android.view.MenuItem
 
-import com.example.android.sample.myrssreader.WebPageFragment
-import com.example.buntafujikawa.rssreader.data.Link
-import com.example.buntafujikawa.rssreader.service.PollingService
-import com.example.buntafujikawa.rssreader.adapter.LinkListPagerAdapter
+import com.sugosumadesu.android.sample.myrssreader.WebPageFragment
+import com.sugosumadesu.buntafujikawa.rssreader.data.Link
+import com.sugosumadesu.buntafujikawa.rssreader.service.PollingService
+import com.sugosumadesu.buntafujikawa.rssreader.adapter.LinkListPagerAdapter
 
 import kotlinx.android.synthetic.main.activity_main.*
 

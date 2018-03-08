@@ -1,4 +1,4 @@
-package com.example.buntafujikawa.rssreader.net
+package com.sugosumadesu.buntafujikawa.rssreader.net
 
 import java.io.BufferedInputStream
 import java.io.IOException

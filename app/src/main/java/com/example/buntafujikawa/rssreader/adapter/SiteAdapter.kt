@@ -1,4 +1,4 @@
-package com.example.buntafujikawa.rssreader.adapter
+package com.sugosumadesu.buntafujikawa.rssreader.adapter
 
 import android.content.Context
 import android.util.Log
@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 
-import com.example.buntafujikawa.rssreader.R
-import com.example.buntafujikawa.rssreader.data.Site
+import com.sugosumadesu.buntafujikawa.rssreader.R
+import com.sugosumadesu.buntafujikawa.rssreader.data.Site
 
 import kotlinx.android.synthetic.main.item_site.view.*
 
