@@ -5,6 +5,7 @@ import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 
 import com.sugosumadesu.buntafujikawa.rssreader.AwsNewestInformationFragment
+import com.sugosumadesu.buntafujikawa.rssreader.AwsProblemInformationFragment
 import com.sugosumadesu.buntafujikawa.rssreader.LinkListFragment
 import com.sugosumadesu.buntafujikawa.rssreader.common.LinkListType
 
@@ -14,10 +15,11 @@ class LinkListPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
         Newest("最新情報") {
             override fun createFragment(): Fragment = AwsNewestInformationFragment.newInstance(LinkListType.Newest)
         },
+        TROUBLE("障害情報") {
+//            override fun createFragment() = AwsNewestInformationFragment.newInstance(LinkListType.TROUBLE)
+            override fun createFragment(): Fragment = AwsProblemInformationFragment.newInstance(LinkListType.TROUBLE)
+        },
         // TODO 対応完了したらタブを追加する
-//        TROUBLE("障害情報") {
-//            override fun createFragment() = LinkListFragment.newInstance(LinkListType.TROUBLE)
-//        },
 //        TWITCH("Twitch") {
 //            override fun createFragment() = LinkListFragment.newInstance(LinkListType.TWITCH)
 //        },
