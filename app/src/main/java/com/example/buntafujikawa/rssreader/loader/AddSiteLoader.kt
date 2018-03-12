@@ -17,21 +17,26 @@ import java.io.InputStream
 
 class AddSiteLoader(context: Context, private var url: String) : AsyncTaskLoader<Site>(context) {
 
+    companion object {
+        fun fetchFeedList(url: String, parser: RssParser = RssParser()): List<Link>? {
+            if (url.isEmpty()) return null
+
+            // RSSフィードをダウンロード
+            val httpGet: HttpGet = HttpGet(url)
+            if (!httpGet.get()) return null
+
+            // レスポンスの解析
+            val input: InputStream = httpGet.getResponse()
+            if (!parser.parse(input)) return null
+
+            return parser.getLinkList()
+        }
+    }
+
     override fun loadInBackground(): Site? {
-        if (this.url.isEmpty()) return null
-
-        // RSSフィードをダウンロード
-        val httpGet: HttpGet = HttpGet(this.url)
-        if (!httpGet.get()) return null
-
-        // レスポンスの解析
-        val input: InputStream = httpGet.getResponse()
         val parser: RssParser = RssParser()
-
-        if (!parser.parse(input)) return null
-
+        val links: List<Link> = fetchFeedList(this.url, parser) ?: return null
         val site: Site = parser.getSite()
-        val links: List<Link> = parser.getLinkList()
 
         site.url = this.url
         site.linkCount = links.size.toLong()
