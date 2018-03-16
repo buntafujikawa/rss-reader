@@ -16,13 +16,13 @@ class LinkListPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             override fun createFragment(): Fragment = AwsNewestInformationFragment.newInstance(LinkListType.Newest)
         },
         TROUBLE("障害情報") {
-//            override fun createFragment() = AwsNewestInformationFragment.newInstance(LinkListType.TROUBLE)
             override fun createFragment(): Fragment = AwsProblemInformationFragment.newInstance(LinkListType.TROUBLE)
         },
-        // TODO 対応完了したらタブを追加する
-//        TWITCH("Twitch") {
-//            override fun createFragment() = LinkListFragment.newInstance(LinkListType.TWITCH)
-//        },
+        TWITTER("Tweet") {
+            // TODO フラグメントを作成したら変更をする
+            // RetrofitでAPIを取得する部分をディレクトリから作成する必要がある
+            override fun createFragment() = LinkListFragment.newInstance(LinkListType.TWITTER)
+        },
         OPTIONAL("OPTIONAL") {
             override fun createFragment() = LinkListFragment.newInstance(LinkListType.OPTIONAL)
         };
