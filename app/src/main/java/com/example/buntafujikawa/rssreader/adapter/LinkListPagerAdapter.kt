@@ -16,7 +16,7 @@ class LinkListPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
         Newest("最新情報") {
             override fun createFragment(): Fragment = AwsNewestInformationFragment.newInstance(LinkListType.Newest)
         },
-        TROUBLE("障害情報") {
+        TROUBLE("障害情報(EC2)") {
             override fun createFragment(): Fragment = AwsProblemInformationFragment.newInstance(LinkListType.TROUBLE)
         },
         TWITTER("ツイート") {
