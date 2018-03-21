@@ -18,7 +18,7 @@ class LinkListPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
         TROUBLE("障害情報") {
             override fun createFragment(): Fragment = AwsProblemInformationFragment.newInstance(LinkListType.TROUBLE)
         },
-        TWITTER("Tweet") {
+        TWITTER("ツイート") {
             // TODO フラグメントを作成したら変更をする
             // RetrofitでAPIを取得する部分をディレクトリから作成する必要がある
             override fun createFragment() = LinkListFragment.newInstance(LinkListType.TWITTER)
