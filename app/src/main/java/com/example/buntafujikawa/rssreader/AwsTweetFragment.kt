@@ -16,6 +16,8 @@ import com.sugosumadesu.buntafujikawa.rssreader.common.LinkListType
 import com.sugosumadesu.buntafujikawa.rssreader.data.Link
 
 import kotlinx.android.synthetic.main.fragment_links.view.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 /**
  * AWSの公式ツイッターアカウントのツイートを表示するFragment
@@ -23,8 +25,6 @@ import kotlinx.android.synthetic.main.fragment_links.view.*
 class AwsTweetFragment : Fragment(), LinkAdapter.OnItemClickListener {
 
     companion object {
-        // LinkListTypeに合わせている
-        private const val LOADER_LINKS: Int = 3
 
         private const val LINK_LIST_TYPE_PARAM = "link_list_type_param"
 
@@ -74,10 +74,13 @@ class AwsTweetFragment : Fragment(), LinkAdapter.OnItemClickListener {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
+        val dateFormat = SimpleDateFormat("EEE MMM dd HH:mm:ss Z yyyy", Locale.US)
         links = ArrayList<Link>()
+
         APIClient.fetchAWSTweetList(context!!, {
             it.forEach {
-                 val link = Link(title =  it.id_str, description = it.text)
+                // すごい手抜きだけど、時間かけたくないのでこれでよしとする
+                val link = Link(title = "アマゾンウェブサービス", description = it.text, pubDate = dateFormat.parse(it.created_at).time, url = "https://twitter.com/awscloud_jp")
                 links.add(link)
             }
 
