@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentPagerAdapter
 
 import com.sugosumadesu.buntafujikawa.rssreader.AwsNewestInformationFragment
 import com.sugosumadesu.buntafujikawa.rssreader.AwsProblemInformationFragment
+import com.sugosumadesu.buntafujikawa.rssreader.AwsTweetFragment
 import com.sugosumadesu.buntafujikawa.rssreader.LinkListFragment
 import com.sugosumadesu.buntafujikawa.rssreader.common.LinkListType
 
@@ -19,12 +20,10 @@ class LinkListPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm) {
             override fun createFragment(): Fragment = AwsProblemInformationFragment.newInstance(LinkListType.TROUBLE)
         },
         TWITTER("ツイート") {
-            // TODO フラグメントを作成したら変更をする
-            // RetrofitでAPIを取得する部分をディレクトリから作成する必要がある
-            override fun createFragment() = LinkListFragment.newInstance(LinkListType.TWITTER)
+            override fun createFragment(): Fragment = AwsTweetFragment.newInstance(LinkListType.TWITTER)
         },
         OPTIONAL("OPTIONAL") {
-            override fun createFragment() = LinkListFragment.newInstance(LinkListType.OPTIONAL)
+            override fun createFragment(): Fragment = LinkListFragment.newInstance(LinkListType.OPTIONAL)
         };
 
         abstract fun createFragment(): Fragment

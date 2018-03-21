@@ -31,7 +31,12 @@ import com.sugosumadesu.buntafujikawa.rssreader.adapter.LinkListPagerAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 // TODO interfaceが増えてきたので、構成を変更したほうが良さそう
-class MainActivity : AppCompatActivity(), SiteListFragment.SiteListFragmentListener, LinkListFragment.LinkListFragmentListener, AwsNewestInformationFragment.AwsNewestInformationFragmentListener, AwsProblemInformationFragment.AwsProblemInformationFragmentListener {
+class MainActivity : AppCompatActivity(),
+    SiteListFragment.SiteListFragmentListener,
+    LinkListFragment.LinkListFragmentListener,
+    AwsNewestInformationFragment.AwsNewestInformationFragmentListener,
+    AwsProblemInformationFragment.AwsProblemInformationFragmentListener,
+    AwsTweetFragment.AwsTweetFragmentListener {
 
     companion object {
         // 定期フェッチのジョブID

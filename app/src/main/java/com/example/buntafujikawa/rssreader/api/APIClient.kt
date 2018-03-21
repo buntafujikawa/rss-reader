@@ -18,7 +18,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 object APIClient {
-    private const val BASE_URL = "https://api.twitter.com/1.1/statuses/user_timeline.json"
+    private const val BASE_URL = "https://api.twitter.com/1.1/"
+    private const val TWITTER_ACCOUNT_NAME = "awscloud_jp"
 
     // TODO tokenをどこで管理するかを決める
     private const val AUTH_TOKEN = "*****"
@@ -50,7 +51,7 @@ object APIClient {
 
     fun fetchAWSTweetList(context: Context, onSuccess: (response: List<Tweet>) -> Unit, onError: Int) {
         val service: TwitterService = restClient().create(TwitterService::class.java)
-        service.fetchTweet("awscloud_jp", 10)
+        service.fetchTweet(TWITTER_ACCOUNT_NAME, 10)
             .subscribeOn(Schedulers.io()) // API通信を非同期に実行する
             .observeOn(AndroidSchedulers.mainThread()) // Observableが吐き出したデータを受け取って加工する場所を指定するスレッド
             .subscribe({
